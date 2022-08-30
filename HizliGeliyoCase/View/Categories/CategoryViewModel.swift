@@ -5,11 +5,7 @@
 //  Created by İSMAİL AÇIKYÜREK on 27.08.2022.
 //
 
-
-
 import UIKit
-import Alamofire
-import Kingfisher
 
 protocol CategoryViewModelProtocol {
     var categoryName : [String] {get set}

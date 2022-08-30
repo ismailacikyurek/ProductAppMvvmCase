@@ -16,6 +16,7 @@ class SingInViewController: UIViewController {
     let viewModel : SingInViewModelProtocol = SingInViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.initialize()
         viewModel.setUpDelegate(self)
         textFieldProperties()
         keyboard()
@@ -30,12 +31,6 @@ class SingInViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        let currentUSer = Auth.auth().currentUser
-        if currentUSer != nil {
-            self.nextHomeVc()
-        }
-    }
 
     func textFieldProperties() {
         //cornerRadius

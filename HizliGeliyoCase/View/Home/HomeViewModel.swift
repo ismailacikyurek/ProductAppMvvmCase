@@ -5,8 +5,6 @@
 //  Created by İSMAİL AÇIKYÜREK on 27.08.2022.
 //
 import UIKit
-import Alamofire
-import Kingfisher
 
 protocol HomeViewModelProtocol {
     var filterArray : [ProductsModel]? { get set }

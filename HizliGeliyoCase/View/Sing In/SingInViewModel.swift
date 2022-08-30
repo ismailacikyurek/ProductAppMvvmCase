@@ -5,10 +5,10 @@
 //  Created by İSMAİL AÇIKYÜREK on 27.08.2022.
 //
 import Foundation
-import UIKit
 import FirebaseAuth
 
 protocol SingInViewModelProtocol {
+    func initialize()
     func setUpDelegate(_ viewController: SingInViewController)
     func userLogin(email: String, password: String)
 }
@@ -19,6 +19,18 @@ class SingInViewModel : SingInViewModelProtocol {
     func setUpDelegate(_ viewController: SingInViewController) {
         delegate = viewController
     }
+    
+    func initialize() {
+        currentControl()
+    }
+    
+    func currentControl() {
+        let currentUSer = Auth.auth().currentUser
+        if currentUSer != nil {
+            delegate?.nextHomeVc()
+        }
+    }
+    
     
     func userLogin(email : String, password : String){
           Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
