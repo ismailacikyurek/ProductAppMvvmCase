@@ -1,1 +1,1 @@
-# ProductAppMvvmCase
+User registers with Firebase platform. It is then listed along the main of purchasing with APIs. The user is searching using the search bar. In addition, filtering is done using the category list.I used Alamofire and Kinfisher 3rd party library in this application. I used the MVVM design pattern.
