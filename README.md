@@ -1,1 +1,21 @@
-User registers with Firebase platform. It is then listed along the main of purchasing with APIs. The user is searching using the search bar. In addition, filtering is done using the category list.I used Alamofire and Kinfisher 3rd party library in this application. I used the MVVM design pattern.
+In this application, I got the values showing the air quality according to the city names from https://api.ambeedata.com/ using Alamofire. I then saved these values to the core data. I used the MVVM design pattern.
+
+Sing Up Page:
+
+On this page the user registers using firebaseAuth. It has password repeat and secureText feature.
+
+Sing Up Page:
+
+On this page the user is logging in using firebaseAuth. If the user has entered before, it goes directly to the Product page.
+
+Home Page :
+
+Here, the products coming from the API are listed in the collectionView. Filtering is done by entering category or product name in SearchBar.
+
+Profile Page :
+
+On this page, the user logs out safely.
+
+Category Page :
+
+Here, the categories of products coming from API are listed. The user selects a category.
