@@ -16,11 +16,16 @@ class SingInViewController: UIViewController {
     let viewModel : SingInViewModelProtocol = SingInViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.initialize()
+       
         viewModel.setUpDelegate(self)
         textFieldProperties()
         keyboard()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.initialize()
+    }
+    
     // MARK: - Keyboard Hidden
     func keyboard() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(keyboardClose))
